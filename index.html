@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./sprite.svg">
+  <title>Modal</title>
+</head>
+
+<body>
+  <button id="modal-open" class="btn btn--primary">Open modal</button>
+  <div id="modal" class="modal">
+    <div class="modal__inner">
+      <form action="#" class="modal__content" id="form">
+        <div class="modal__title">Title form</div>
+
+        <div class="input modal__input">
+          <input class="input__state" id="first" type="text" placeholder="First Name *" />
+          <label class="input__title" for="first">First Name *</label>
+          <span class="message">Please fill in first name</span>
+          <span class="message" data-name>Please enter a first name</span>
+        </div>
+
+        <div class="input modal__input">
+          <input class="input__state" id="last" type="text" placeholder="Last Name *" />
+          <label class="input__title" for="last">Last Name *</label>
+          <span class="message">Please fill in last name</span>
+          <span class="message" data-surname>Please enter a last name</span>
+        </div>
+
+        <div class="input modal__input">
+          <input class="input__state" type="email" id="email" placeholder="user@gmail.com *" />
+          <label class="input__title" for="email">user@gmail.com *</label>
+          <span class="message">Please fill in email</span>
+          <span class="message" data-email>Please enter a valid email address</span>
+        </div>
+
+        <div class="modal__product">
+          <div class="modal__title-product">Product type *</div>
+          <div class="dropdown">
+            <button class="dropdown__toggle" id="dropdown" value name="dropdown">Select product type</button>
+            <ul class="dropdown__list">
+              <li class="dropdown__list-item" data-value="50">Product $50</li>
+              <li class="dropdown__list-item" data-value="100">Product $100</li>
+              <li class="dropdown__list-item" data-value="300">Product $300</li>
+            </ul>
+            <span class="message">Please select product type</span>
+          </div>
+        </div>
+
+        <div class="modal__product">
+          <div class="modal__title-product">Additinal feature for $100</div>
+          <label class="toggler">
+            <input class="toggler__input" type="checkbox" data-100 value />
+            <div class="toggler__state">
+              <div class="toggler__control">
+                <div class="toggler__icon"></div>
+              </div>
+            </div>
+          </label>
+        </div>
+
+        <div class="modal__product">
+          <div class="modal__title-product">Additinal feature for $200</div>
+          <label class="toggler">
+            <input class="toggler__input" type="checkbox" data-200 value />
+            <div class="toggler__state">
+              <div class="toggler__control">
+                <div class="toggler__icon"></div>
+              </div>
+            </div>
+          </label>
+        </div>
+
+        <div class="textarea">
+          <textarea class="textarea_state" id="comment" cols="50" rows="4" placeholder="Type your comment"></textarea>
+          <label for="comment" class="textarea__title">Type your comment</label>
+        </div>
+
+        <div class="modal__product">
+          <div class="modal__title-product">Total price</div>
+          <input class="modal__total" id="total" type="text" value="0" disabled>
+        </div>
+        <div class="modal__btn">
+          <button class="btn btn--primary" type="submit" id="submit">Send form</button>
+        </div>
+        <svg id="modal-close" class="modal__close">
+          <use xlink:href="./sprite.svg#close"></use>
+        </svg>
+      </form>
+    </div>
+  </div>
+</body>
+<script src="./index.js"></script>
+
+</html>
